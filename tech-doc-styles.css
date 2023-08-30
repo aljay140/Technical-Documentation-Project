@@ -1,50 +1,54 @@
+/* reset sizing */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 10px;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
+    display: grid;
+    grid-template-columns: 20rem 3fr;
+    font-size: 1.6rem;
+    max-width: 1200px;
 }
 
-code {
-    background-color: rgb(255, 216, 214);
-    padding: 1rem;
-}
-
-header.section-name {
-    font-weight: 600;
-    font-size: 2.5rem;
-}
-
-main {
-    padding: 0 1rem;
-}
-
-
-/* Nav Bar stuff */
-
-article.nav-article {
-    max-width: 350px;
-    border-right: 3px solid grey;
-}
-
-header.nav-header {
-    font-size: 2.5rem;
-    padding-right: 10px;
-}
-
-nav {
-    position: relative;
+/* nav bar stuff */
+.nav-div {
     top: 0;
     left: 0;
+    height: 100%;
+    padding-right: 1.6rem;
+    width: 50%;
 }
 
-div.nav-link {
-    width: 100%;
-    border-top: 1px solid black;
+#navbar {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-right: 3px solid gray;
+    background-color: white;
+}
+
+.nav-header {
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding: 1rem;
 }
 
 a.nav-link {
     text-decoration: none;
     margin: 0 1rem;
     color: black;
+    width: 100%;
+    font-size: 1.8rem;
 }
 
 a.nav-link:visited {
@@ -56,9 +60,85 @@ a.nav-link:hover {
     color: white;
 }
 
+/* main content */
+#main-doc {
+    padding-left: 6rem;
+    padding-top: 2rem;
+}
+
+header.section-name {
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.text-chunk {
+    margin: 1.6rem 0;
+}
+
+/* data type list */
+.data-type-list {
+    margin-left: 2rem;
+}
+
+.primitive-list {
+    margin-left: 1.6rem;
+}
+
+.d_type {
+    font-weight: 500;
+}
+
+/* code chunks */
+.code-box {
+    background-color: rgb(255, 193, 193);
+    margin: 2rem 2rem ;
+    padding: 1rem;
+    width: fit-content;
+    text-align: left;
+}
+
+/* footer */
+#footer {
+    height: 5rem;
+    text-align: center;
+    border-top: 1px solid black;
+    width: 100%;
+    margin-top: 1rem;
+}
+
 /* media sizes */
-@media only screen and (max-width: 600px) {
-    body {
-        background-color: blue;
-    }
+ @media only screen and (max-width: 400px) {
+  #main-doc {
+    margin-left: -10px;
+  }
+
+  code {
+    margin-left: -20px;
+    width: 100%;
+    padding: 15px;
+    padding-left: 10px;
+    padding-right: 45px;
+    min-width: 233px;
+  }
+}
+
+@media (max-width: 815px) {
+   /*For mobile phones:*/
+  #navbar {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display:inline-flex;
+  }
+
+  #main-doc {
+    position: relative;
+    top:0;
+    margin-left: 0px;
+    margin-top: 1rem;
+    padding-left: 0;
+  }
 }
