@@ -1,102 +1,150 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
     <head>
         <meta charset="utf-8">
         <title>Technical Documentation Page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="C:\Users\aljay\OneDrive\Desktop\Web Dev\Technical Documentation Page\tech-doc-styles.css">
+        <link rel="stylesheet" href="tech-doc-styles.css">
     </head>
 
     <body>
         <!-- navbar -->
-        <article class="nav-article">
+        <div class="nav-div">
             <nav id="navbar">
                 <header class="nav-header">JS Documentation</header>
-                <div class="nav-link"><a class="nav-link" href="#introduction">Introduction</a></div>
-                <div class="nav-link"><a class="nav-link" href="#java_and_javascript">Java and Javascript</a></div>
-                <div class="nav-link"><a class="nav-link" href="#hello_world">Hello World</a></div>
-                <div class="nav-link"><a class="nav-link" href="#variables">Variables</a></div>
-                <div class="nav-link"><a class="nav-link" href="#constants">Constants</a></div>
-                <div class="nav-link"><a class="nav-link" href="#data_types">Data Types</a></div>
+                <a class="nav-link" href="#introduction">Introduction</a>
+                <a class="nav-link" href="#java_and_javascript">Java and Javascript</a>
+                <a class="nav-link" href="#hello_world">Hello World</a>
+                <a class="nav-link" href="#variables">Variables</a>
+                <a class="nav-link" href="#constants">Constants</a>
+                <a class="nav-link" href="#data_types">Data Types</a>
             </nav>
-        </article>
-        <article class="main-article">
-            <main id="main-doc">
-                <!-- Introduction -->
-                <section class="main-section" id="introduction">
-                    <header class="section-name">Introduction</header>
+        </div>
+
+        <!-- Meat and Potatoes -->
+
+        <main id="main-doc">
+            <!-- Introduction -->
+            <section class="main-section" id="introduction">
+                <header class="section-name">Introduction</header>
+                <div class="text-chunk">
                     <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.</p>
-                </section>
+                </div>
+                
+            </section>
 
-                <!-- Java -->
-                <section class="main-section" id="java_and_javascript">
-                    <header class="section-name">Java and JavaScript</header>
+            <!-- Java -->
+            <section class="main-section" id="java_and_javascript">
+                <header class="section-name">Java and JavaScript</header>
+                <div class="text-chunk">
                     <p>JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.</p>
+                    <br>
                     <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
+                    <br>
                     <p>JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes, and methods. You do not have to be concerned with whether methods are public, private, or protected, and you do not have to implement interfaces. Variables, parameters, and function return types are not explicitly typed.</p>
-                </section>
+                </div>
+            </section>
 
-                <!-- Hello World -->
-                <section class="main-section" id="hello_world">
-                    <header class="section-name">Hello World</header>
-                    <div class="section-content">
+            <!-- Hello World -->
+            <section class="main-section" id="hello_world">
+                <header class="section-name">Hello World</header>
+                <div class="section-content">
+                    <div class="text-chunk">
                         <p>To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:</p>
+                    </div>
+                    <div class="code-box">
                         <code>function greetMe(yourName) { alert("Hello " + yourName); } greetMe("World");</code>
+                    </div>
+                    <div class="text-chunk">
                         <p>Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!</p>
                     </div>
-                </section>
+                    
+                </div>
+            </section>
 
-                <!-- Variables -->
-                <section class="main-section" id="variables">
-                    <header class="section-name">Variables</header>
-                    <div class="section-content">
+            <!-- Variables -->
+            <section class="main-section" id="variables">
+                <header class="section-name">Variables</header>
+                <div class="section-content">
+                    <div class="text-chunk">
                         <p>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</p>
+                        <br>
                         <p>There are 3 ways to declare a variable. First, using the keyword var.:</p>
+                    </div>
+                    <div class="code-box">
                         <code>var x= 42.</code>
+                    </div>
+                    <div class="text-chunk">
                         <p>Second, by simply assigning it a value:</p>
+                    </div>
+                    <div class="code-box">
                         <code>x = 42.</code>
+                    </div>
+                    <div class="text-chunk">
                         <p>Third, with the keyword let:</p>
+                    </div>
+                    <div class="code-box">
                         <code>let y = 13.</code>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <!-- Constants -->
-                <section class="main-section" id="constants">
-                    <header class="section-name">Constants</header>
+            <!-- Constants -->
+            <section class="main-section" id="constants">
+                <header class="section-name">Constants</header>
+                <div class="text-chunk">
                     <p>You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.</p>
+                </div>
+                <div class="code-box">
                     <code>const PI = 3.14;</code>
+                </div>
+                <div class="text-chunk">
                     <p>A constant cannot change value through assignment or be re-declared while the script is running. It has to be initialized to a value.</p>
+                    <br>
                     <p>The scope rules for constants are the same as those for let block scope variables. If the const keyword is omitted, the identifier is assumed to represent a variable.</p>
+                    <br>
                     <p>You cannot declare a constant with the same name as a function or variable in the same scope. For example:</p>
-                    <code>// THIS WILL CAUSE AN ERROR function f() {}; const f = 5;
-                        // THIS
-                        WILL CAUSE AN ERROR ALSO function f() { const g = 5; var g;
-                        //statements }</code>
+                </div>
+                <div class="code-box">
+                    <code>// THIS WILL CAUSE AN ERROR function f() {}; const f = 5;</code>
+                    <br>
+                    <code>// THIS WILL CAUSE AN ERROR ALSO function f() { const g = 5; var g;//statements }</code>
+                </div>
+                <div class="text-chunk">
                     <p>However, object attributes are not protected, so the following statement is executed without problems.</p>
-                    <code>const MY_OBJECT = {"key": "value"}; MY_OBJECT.key =
-                        "otherValue";</code>
-                </section>
+                </div>
+                <div class="code-box">
+                    <code>const MY_OBJECT = {"key": "value"}; MY_OBJECT.key ="otherValue";</code>
+                </div>
 
-                <!-- Data Types -->
-                <section class="main-section" id="data_types">
-                    <header class="section-name">Data Types</header>
+            </section>
+
+            <!-- Data Types -->
+            <section class="main-section" id="data_types">
+                <header class="section-name">Data Types</header>
+                <div class="text-chunk">
                     <p>The latest ECMAScript standard defines seven data types:</p>
-                    <ul>
-                        <li>Six data types that are primitives:
-                            <ul>
-                                <li><span class="d_type">Boolean.</span> true and false.</li>
-                                <li><span class="d_type">Null.</span> A special keyword denoting a null value. Because JavaScript is case-sensitive, null is not the same as Null, NULL, or any other variant.</li>
-                                <li><span class="d_type">Undefined.</span> A top-level property whose value is undefined.</li>
-                                <li><span class="d_type">Number.</span> 42 or 3.14159.</li>
-                                <li><span class="d_type">String.</span> "Howdy"</li>
-                            </ul>
-                        </li>
-                        <li>and Object</li>
-                    </ul>
-                </section>
-            </main>
-        </article>
+                </div>
+                <ul class="data-type-list">
+                    <li>Six data types that are primitives:
+                        <ul class="primitive-list">
+                            <li><span class="d_type">Boolean.</span> true and false.</li>
+                            <li><span class="d_type">Null.</span> A special keyword denoting a null value. Because JavaScript is case-sensitive, null is not the same as Null, NULL, or any other variant.</li>
+                            <li><span class="d_type">Undefined.</span> A top-level property whose value is undefined.</li>
+                            <li><span class="d_type">Number.</span> 42 or 3.14159.</li>
+                            <li><span class="d_type">String.</span> "Howdy"</li>
+                        </ul>
+                    </li>
+                    <li>and <span class="d_type">Object</span></li>
+                </ul>
+            </section>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <a href="#introduction">Back to the top</a>
+            </footer>
+        </main>
     </body>
 </html>
