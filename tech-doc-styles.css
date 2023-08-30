@@ -1,0 +1,64 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+}
+
+code {
+    background-color: rgb(255, 216, 214);
+    padding: 1rem;
+}
+
+header.section-name {
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+main {
+    padding: 0 1rem;
+}
+
+
+/* Nav Bar stuff */
+
+article.nav-article {
+    max-width: 350px;
+    border-right: 3px solid grey;
+}
+
+header.nav-header {
+    font-size: 2.5rem;
+    padding-right: 10px;
+}
+
+nav {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+div.nav-link {
+    width: 100%;
+    border-top: 1px solid black;
+}
+
+a.nav-link {
+    text-decoration: none;
+    margin: 0 1rem;
+    color: black;
+}
+
+a.nav-link:visited {
+    color: black;
+}
+
+a.nav-link:hover {
+    background-color: black;
+    color: white;
+}
+
+/* media sizes */
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: blue;
+    }
+}
